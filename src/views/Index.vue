@@ -6,7 +6,8 @@
         </header>
         <main>
             <aside class="aside-left">
-                <div>left</div>
+                <!-- <img class="macbook" src="../assets/macbook.svg" alt="macbook"> -->
+                <RandomBubbles/>
             </aside>
             <aside class="aside-right">
                 <div>
@@ -23,11 +24,15 @@
 </template>
 
 <script>
+import RandomBubbles from '../components/RandomBubbles'
 export default {
  methods: {
     setLocalization() {
       this.$i18n.locale = this.$i18n.locale === "ru" ? "en" : "ru";
     }
+  },
+  components: {
+    RandomBubbles
   }
 }
 </script>

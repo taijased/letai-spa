@@ -4,7 +4,7 @@
 .wrapper {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow: hidden !important;
     background: radial-gradient(1452.75px at 29.49% 51.48%, #3AAAFF 0%, #1B71FF 100%);
     display: grid;
     grid-template-columns: 50vw 50vw;
@@ -80,11 +80,13 @@ main {
     .aside-left {
         width: @width-aside-left;
         height: @height-aside;
-        box-shadow: 0 1px 0.5px rgba(0,0,0,1);
+        background: url('../assets/macbook.svg');
+        background-repeat: no-repeat;
+        background-position: center; 
+        background-size: 400px 500px;
     }
     .aside-right {
         width: @width-aside-right;
         height: @height-aside;
-        box-shadow: 0 1px 0.5px rgba(0,0,0,1);
     }
 }
