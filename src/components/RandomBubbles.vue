@@ -24,20 +24,21 @@ randomT(min,max)
 .bubble
   display block
   border-radius: 100%
-  opacity: .8
+  opacity: 0
+  transition: opacity .5s
   position absolute
 
 for $i in (1..50)
-  
-  $bgpos = $i % 2 == 0 ? top right : center
 
   .bubble
     &:nth-child({$i})
-      background: radial-gradient(ellipse at $bgpos, rgba(27, 113, 255, 0.0001) 0%,#004AC4 100%)
+      background: radial-gradient(ellipse at bottom, rgba(27, 113, 255, 0.0001) 0%,#1B71FF 100%)
       width: random(5, 100)px
       height: @width
       right: random(1, 100)vw
       bottom: random(30%, 50%)
+      opacity: .8
+      transition: opacity 1s
       transform: translate(random(0,-50%), -50%)
       animation move+$i infinite randomT(3, 10)
 
