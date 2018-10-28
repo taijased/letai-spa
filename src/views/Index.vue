@@ -10,10 +10,7 @@
                 <RandomBubbles/>
             </aside>
             <aside class="aside-right">
-                <div>
-                    right
-                    <router-view/>
-                </div>
+                <router-view/>
             </aside>
         </main>
         <footer>
@@ -25,6 +22,8 @@
 
 <script>
 import RandomBubbles from '../components/RandomBubbles'
+import '../style/index.less'
+import '../style/font.css'
 export default {
  methods: {
     setLocalization() {
@@ -36,8 +35,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less">
-@import url('../style/index.less');
-
-</style>

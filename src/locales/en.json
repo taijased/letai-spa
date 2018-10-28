@@ -1,5 +1,39 @@
 {
   "internationalization": {
     "title": "Русская версия"
+  },
+  "form": {
+    "phone": "Phone number",
+    "btn": "Send code"
+  },
+  "navigation": {
+    "or": "or",
+    "enter": "Sign in with Tattelecom account",
+    "auth": "Sign in with Public Services Portal account"
+  },
+  "hello": {
+    "title": "Welcome to Tattelecom",
+    "subtitle": "Specify your phone number to recieve acces code as message"
+  },
+  "enter_code": {
+    "subtitle": "Access code was sent to your number as message",
+    "input": "Enter code here",
+    "btn": "Connect",
+    "navigation": {
+      "voice": "Сall authorization",
+      "send_sms": "Re-send code after 16 seconds",
+      "no_sms": "I  didn’t receive the message"
+    }
+  },
+  "voice_login": {
+    "subtitle": "That are fuck your doing? Where is translate?"
+  },
+  "ttk_account_login": {
+    "subtitle":"Enter your login and password to sign in ",
+    "login_input": "Login",
+    "password_input": "Password",
+    "navigation": {
+      "get_password_and_login": "Receive login and password"
+    }
   }
 }

@@ -1,0 +1,156 @@
+@import url("./variables.less");
+@webkit: true;
+@moz: false;
+@ms: false;
+@o: false;
+.hardwareAccel() {
+  .prefixed(transform, perspective(1px) translateZ(0));
+}
+
+.forceBlockLevel() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.hacks() {
+  .forceBlockLevel();
+  .hardwareAccel();
+}
+.sweep-to-left() {
+  .hacks();
+  position: relative;
+  .prefixed(transition-property, color);
+  .prefixed(transition-duration, @time-description);
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: @btn-hover;
+    .prefixed(transform, scaleX(0));
+    .prefixed(transform-origin, 100% 50%);
+    .prefixed(transition-property, transform);
+    .prefixed(transition-duration, @time-description);
+    .prefixed(transition-timing-function, ease-out);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    cursor: pointer;
+    color: white;
+    &:before {
+      .prefixed(transform, scaleX(1));
+    }
+  }
+}
+.sweep-to-right() {
+  .hacks();
+  position: relative;
+  .prefixed(transition-property, color);
+  .prefixed(transition-duration, @time-description);
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: @btn-hover;
+    .prefixed(transform, scaleX(0));
+    .prefixed(transform-origin, 100% 50%);
+    .prefixed(transition-property, transform);
+    .prefixed(transition-duration, @time-description);
+    .prefixed(transition-timing-function, ease-out);
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+    cursor: pointer;
+    &:before {
+      .prefixed(transform, scaleX(1));
+      .prefixed(transform-origin, 0 50%);
+    }
+  }
+}
+.prefixed(@property, @value) {
+  & when (@webkit = true) {
+    -webkit-@{property}: @value;
+  }
+
+  & when (@moz = true) {
+    -moz-@{property}: @value;
+  }
+
+  & when (@ms = true) {
+    -ms-@{property}: @value;
+  }
+
+  & when (@o = true) {
+    -o-@{property}: @value;
+  }
+
+  @{property}: @value;
+}
+
+// prefix keyframes
+.keyframes(@name; @content) {
+  & when (@webkit = true) {
+    @-webkit-keyframes @name {
+      @content();
+    }
+  }
+
+  & when (@moz = true) {
+    @-moz-keyframes @name {
+      @content();
+    }
+  }
+
+  & when (@ms = true) {
+    @-ms-keyframes @name {
+      @content();
+    }
+  }
+
+  & when (@o = true) {
+    @-o-keyframes @name {
+      @content();
+    }
+  }
+
+  @keyframes @name {
+    @content();
+  }
+}
+.input-hover() {
+  &:hover,
+  &:valid {
+    .label {
+      font-size: @subtitle-size - 2;
+      top: 0;
+      left: 0;
+      transition: top @time-description, left @time-description,
+        font-size @time-description;
+    }
+  }
+  .label {
+    font-size: @subtitle-size;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transition: top @time-description, left @time-description,
+      font-size @time-description;
+    z-index: 2;
+    transform: translate(0, -50%);
+  }
+}

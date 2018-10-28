@@ -1,0 +1,12 @@
+@font-face {
+  font-family: TTNorms Bold;
+  src: url("../assets/font/TTNorms-Bold.otf") format("truetype");
+}
+@font-face {
+  font-family: TTNorms Regular;
+  src: url("../assets/font/TTNorms-Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: TTNorms Medium;
+  src: url("../assets/font/TTNorms-Medium.otf") format("truetype");
+}
