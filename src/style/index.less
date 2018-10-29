@@ -1,10 +1,12 @@
 @import url("./variables.less");
 @import url('./animation.less');
+@import url('./mobile.less');
 // grid
 .wrapper {
   width: 100vw;
   height: 100vh;
-  overflow: hidden !important;
+  overflow: hidden;
+  font-size: @subtitle-size;
   background: radial-gradient(
     1452.75px at 29.49% 51.48%,
     #3aaaff 0%,
@@ -41,9 +43,9 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: @gray;
+    color: @primary;
     transition: color @time-description ease-in-out;
-    font-size: 14px;
+    box-shadow:0 1px 0 white;
     &:hover {
       cursor: pointer;
       color: @primary;
@@ -76,6 +78,7 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+ 
   .aside-left {
     width: @width-aside-left;
     height: @height-aside;

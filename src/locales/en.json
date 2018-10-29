@@ -35,5 +35,25 @@
     "navigation": {
       "get_password_and_login": "Receive login and password"
     }
+  },
+  "success": {
+    "title": "Подключение на скорости<br/>5 мб/с",
+    "btn": "Increase speed",
+    "navigation": {
+      "to_browser": "Go to browser"
+    }
+  },
+  "horeca": {
+    "subtitle": "Dear customer! Thank you for using our services! You<br/> signed in as:",
+    "btn_change": "Change data",
+    "second_subtitle": "You are using public Wi-Fi. The following services are<br/> available for you:",
+    "input": "123456789@wifi",
+    "btn_speed": "Increase speed",
+    "navigation": {
+      "horeca": "Доступ на скорости 5 мб/с",
+      "price_1": "Wi-Fi Day - 49 rubles",
+      "price_2": "Wi-Fi Week - 199 rubles",
+      "price_3": "Wi-Fi Month - 299 rubles"
+    }
   }
 }

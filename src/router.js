@@ -6,6 +6,9 @@ const EnterCode = () => import ('./views/EnterCode.vue')
 const CodeDontSend = () => import ('./views/CodeDontSend.vue')
 const VoiceLogin = () => import ('./views/VoiceLogin.vue')
 const TTKAccountLogin = () => import ('./views/TTKAccountLogin.vue')
+const Success = () => import ('./views/Success.vue')
+const Horeca = () => import ('./views/Horeca.vue')
+const TTKLink = () => import ('./views/TTKLink.vue')
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +36,18 @@ export default new Router({
         {
           path: 'ttk-account-login',
           component: TTKAccountLogin
+        },
+        {
+          path: 'success',
+          component: Success
+        },
+        {
+          path: 'horeca',
+          component: Horeca
+        },
+        {
+          path: 'ttk-link',
+          component: TTKLink
         }
       ]
     },
