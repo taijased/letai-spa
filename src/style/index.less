@@ -7,6 +7,7 @@
   height: 100vh;
   overflow: hidden;
   font-size: @subtitle-size;
+  font-family: TTNorms Medium;
   background: radial-gradient(
     1452.75px at 29.49% 51.48%,
     #3aaaff 0%,
@@ -41,12 +42,13 @@ header {
     cursor: pointer;
   }
   .internationalization {
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: @primary;
+    color: @gray;
     transition: color @time-description ease-in-out;
-    box-shadow: 0 1px 0 white;
+    // box-shadow: 0 1px 0 white;
     &:hover {
       cursor: pointer;
       color: @primary;
@@ -96,7 +98,6 @@ main {
       flex-direction: row;
       width: 100%;
       height: 100%;
-      font-family: TTNorms Medium;
       .content {
         .title {
           margin-top: 30vh;
