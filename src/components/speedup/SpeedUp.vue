@@ -11,19 +11,10 @@
                 <div class="btn-primary">{{$t("horeca.btn_change")}}</div>
             </form>
             <div class="subtitle" v-html="$t('horeca.second_subtitle')"></div>
-            <div class="navigation">
-                <span class="nav-item">{{$t("horeca.navigation.price_1")}}</span>
-                <span class="nav-item">{{$t("horeca.navigation.price_2")}}</span>
-                <span class="nav-item">{{$t("horeca.navigation.price_3")}}</span>
-            </div>
+            <transition name="fade">
+                <router-view/>
+            </transition>
         </div>
     </div>
 </template>
 
-<script>
-export default {};
-</script>
-
-<style lang="less">
-
-</style>

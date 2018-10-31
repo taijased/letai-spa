@@ -38,6 +38,7 @@ header {
   .logo {
     width: 130px;
     height: 15px;
+    cursor: pointer;
   }
   .internationalization {
     display: flex;
@@ -171,18 +172,18 @@ main {
           display: flex;
           flex-direction: column;
           .nav-item {
-            width: auto;
+            width: fit-content;
             margin-top: 10px;
             font-size: @subtitle-size;
             color: @gray;
             text-align: left;
+            // border-bottom: 1px solid white;
             &:hover {
               cursor: pointer;
               color: @primary; // box-shadow: 0 0 0 @primary;
-              text-decoration: underline;
-              transition: color @time-description,
-                text-decoration @time-description;
+              transition: color @time-description;
             }
+            
           }
           .item-disabled {
             pointer-events: none;

@@ -1,14 +1,25 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 const Index = () => import ('./views/Index.vue')
-const Hello = () => import ('./views/Hello.vue')
-const EnterCode = () => import ('./views/EnterCode.vue')
-const CodeDontSend = () => import ('./views/CodeDontSend.vue')
-const VoiceLogin = () => import ('./views/VoiceLogin.vue')
-const TTKAccountLogin = () => import ('./views/TTKAccountLogin.vue')
-const Success = () => import ('./views/Success.vue')
-const Horeca = () => import ('./views/Horeca.vue')
-const TTKLink = () => import ('./views/TTKLink.vue')
+const Success = () => import ('./components/Success.vue')
+
+// components children components welcome
+const Hello = () => import ('./components/welcome/Hello.vue')
+const Welcome = () => import ('./components/welcome/Welcome.vue')
+const TTKAccountLogin = () => import ('./components/welcome/TTKAccountLogin.vue')
+const VoiceLogin = () => import ('./components/welcome/VoiceLogin.vue')
+
+// components children components speedup
+const Horeca = () => import ('./components/speedup/Horeca.vue')
+const SpeedUp = () => import ('./components/speedup/SpeedUp.vue')
+const TTKLink = () => import ('./components/speedup/TTKLink.vue')
+const Another = () => import ('./components/speedup/Another.vue')
+
+// components children components entercode
+const EnterCode = () => import ('./components/entercode/EnterCode.vue')
+const CodeDontSend = () => import ('./components/entercode/CodeDontSend.vue')
+const NavigationEnterCode = () => import ('./components/entercode/NavigationEnterCode.vue')
+
 Vue.use(Router)
 
 export default new Router({
@@ -20,36 +31,58 @@ export default new Router({
       children: [
         {
           path: '',
-          component: Hello
+          component: Welcome,
+          children: [
+            {
+              path: '',
+              component: Hello
+            },
+            {
+              path: '/ttk-account-login',
+              component: TTKAccountLogin
+            },
+            {
+              path: '/voice-login',
+              component: VoiceLogin
+            },
+            {
+              path: '/enter-with-code',
+              component: EnterCode,
+              children: [
+                {
+                  path: '',
+                  component: NavigationEnterCode
+                },
+                {
+                  path: '/code-dont-send',
+                  component: CodeDontSend
+                },
+              ]
+            },
+          ]
         },
         {
-          path: 'enter-with-code',
-          component: EnterCode
-        },
-        {
-          path: 'code-dont-send',
-          component: CodeDontSend
-        },
-        {
-          path: 'voice-login',
-          component: VoiceLogin
-        },
-        {
-          path: 'ttk-account-login',
-          component: TTKAccountLogin
-        },
-        {
-          path: 'success',
+          path: '/success',
           component: Success
         },
         {
-          path: 'horeca',
-          component: Horeca
+          path: '/speedup',
+          component: SpeedUp,
+          children: [
+            {
+              path: '',
+              component: Horeca
+            },
+            {
+              path: '/ttk-link',
+              component: TTKLink
+            },
+            {
+              path: '/another',
+              component: Another
+            }
+          ]
         },
-        {
-          path: 'ttk-link',
-          component: TTKLink
-        }
       ]
     },
   ]

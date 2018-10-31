@@ -41,7 +41,7 @@
     }
   },
   "success": {
-    "title": "Подключение на скорости<br/>5 мб/с",
+    "title": "You are connected at 5 Mbit/s",
     "btn": "Increase speed",
     "navigation": {
       "to_browser": "Go to browser"
@@ -54,7 +54,8 @@
     "input": "123456789@wifi",
     "btn_speed": "Increase speed",
     "navigation": {
-      "horeca": "Доступ на скорости 5 мб/с",
+      "horeca": "Speed of 5 Mbit/s",
+      "another": "Speed of 128 кб/с",
       "price_1": "Wi-Fi Day - 49 rubles",
       "price_2": "Wi-Fi Week - 199 rubles",
       "price_3": "Wi-Fi Month - 299 rubles"

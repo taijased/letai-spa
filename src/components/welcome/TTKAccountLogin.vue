@@ -1,7 +1,6 @@
 <template>
     <div class="container">
         <div class="content">
-            <div class="title" v-html="$t('hello.title')"></div>
             <div class="subtitle" v-html="$t('ttk_account_login.subtitle')"></div>
             <form>
                 <div class="input-primary">      
