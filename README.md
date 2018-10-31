@@ -20,7 +20,8 @@ npm run build
 npm run test
 ```
 
-### Lints and fixes files
+### Links
 ```
 npm run lint
 ```
+*[vue-inputmask](https://github.com/scleriot/vue-inputmask) - Vue.js directive to add a mask to your inputs (vanilla javascript).

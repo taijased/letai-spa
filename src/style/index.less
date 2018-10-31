@@ -1,6 +1,6 @@
 @import url("./variables.less");
-@import url('./animation.less');
-@import url('./mobile.less');
+@import url("./animation.less");
+@import url("./mobile.less");
 // grid
 .wrapper {
   width: 100vw;
@@ -45,7 +45,7 @@ header {
     justify-content: space-between;
     color: @primary;
     transition: color @time-description ease-in-out;
-    box-shadow:0 1px 0 white;
+    box-shadow: 0 1px 0 white;
     &:hover {
       cursor: pointer;
       color: @primary;
@@ -78,7 +78,6 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
- 
   .aside-left {
     width: @width-aside-left;
     height: @height-aside;
@@ -119,11 +118,11 @@ main {
           align-items: center;
           height: @form-height;
           .input-primary {
-              margin-right: 20px;
+            margin-right: 20px;
             input {
               margin: 0;
               border: 0;
-              padding: 0;
+              padding-left: 10px;
               display: inline-block;
               vertical-align: middle;
               white-space: normal;
@@ -131,41 +130,76 @@ main {
               line-height: 1;
               color: white;
               border-bottom: 1px solid white;
+              transition: color @time-description,
+                border-bottom @time-description;
               height: @input-height;
               width: @input-width;
               &:focus {
                 outline: 0;
-                
               }
             }
+            // src style animation.less
             .input-hover();
+          }
+          .error {
+            input {
+              border-bottom: 1px solid @btn-primary;
+              transition: border-bottom @time-description;
+            }
+            .label {
+              color: @btn-primary;
+              transition: color @time-description;
+            }
           }
           .btn-primary {
             width: @btn-width;
             height: @btn-height;
+            color: white;
             border: 1px solid white;
+            transition: color @time-description border @time-description;
             font-size: @subtitle-size;
             .sweep-to-right();
+          }
+          .btn-disabled {
+            pointer-events: none;
+            color: @gray;
+            border: 1px solid @gray;
+            transition: color @time-description border @time-description;
           }
         }
         .navigation {
           display: flex;
           flex-direction: column;
           .nav-item {
+            width: auto;
             margin-top: 10px;
             font-size: @subtitle-size;
             color: @gray;
             text-align: left;
             &:hover {
               cursor: pointer;
-              color: @primary;
-              // box-shadow: 0 0 0 @primary;
+              color: @primary; // box-shadow: 0 0 0 @primary;
               text-decoration: underline;
-              transition: color @time-description, text-decoration @time-description
+              transition: color @time-description,
+                text-decoration @time-description;
             }
+          }
+          .item-disabled {
+            pointer-events: none;
           }
         }
       }
     }
   }
 }
+
+
+// reset arrow from input type number
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}   

@@ -1,8 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
+import store from './store/index'
 import i18n from './i18n'
+// for mask input
+const VueInputMask = require('vue-inputmask').default
+Vue.use(VueInputMask)
 
 Vue.config.productionTip = false
 

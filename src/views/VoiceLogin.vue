@@ -8,7 +8,7 @@
                     <input type="text" required>
                     <div class="label">{{$t("enter_code.input")}}</div>
                 </div>
-                <div class="btn-primary">{{$t("enter_code.btn")}}</div>
+                <div class="btn-primary" @click="$router.push('/success')">{{$t("enter_code.btn")}}</div>
             </form>
         </div>
     </div>

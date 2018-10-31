@@ -21,7 +21,11 @@
     "btn": "Connect",
     "navigation": {
       "voice": "Сall authorization",
-      "send_sms": "Re-send code after 16 seconds",
+      "resend": {
+        "main": "Re-send code",
+        "title": "Re-send code after",
+        "sec": "seconds"
+      }, 
       "no_sms": "I  didn’t receive the message"
     }
   },

@@ -32,7 +32,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: @btn-hover;
+    background: @btn-primary;
     .prefixed(transform, scaleX(0));
     .prefixed(transform-origin, 100% 50%);
     .prefixed(transition-property, transform);
@@ -64,7 +64,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: @btn-hover;
+    background: @btn-primary;
     .prefixed(transform, scaleX(0));
     .prefixed(transform-origin, 100% 50%);
     .prefixed(transition-property, transform);
@@ -133,24 +133,31 @@
   }
 }
 .input-hover() {
-  &:hover,
-  &:valid {
+  &:focus-within, &:hover {
     .label {
       font-size: @subtitle-size - 2;
       top: 0;
       left: 0;
-      transition: top @time-description, left @time-description,
+      transition: color @time-description, top @time-description, left @time-description,
         font-size @time-description;
     }
   }
   .label {
     font-size: @subtitle-size;
+    color: white;
     position: absolute;
     top: 50%;
     left: 10px;
-    transition: top @time-description, left @time-description,
-      font-size @time-description;
+    transition: color @time-description, top @time-description, left @time-description,
+    font-size @time-description;
     z-index: 2;
     transform: translate(0, -50%);
+  }
+  .not-empty {
+    font-size: @subtitle-size - 2;
+    top: 0;
+    left: 0;
+    transition: color @time-description, top @time-description, left @time-description,
+    font-size @time-description;
   }
 }

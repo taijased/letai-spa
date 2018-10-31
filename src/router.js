@@ -12,6 +12,7 @@ const TTKLink = () => import ('./views/TTKLink.vue')
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
