@@ -17,7 +17,7 @@
         </main>
         <footer>
             <div>© ПАО «Таттелеком» 2018</div>
-            <div>powered by <span>tim agency</span></div>
+            <div>powered by <a href="http://tim.agency">tim.agency</a></div>
         </footer>
     </div>
 </template>
