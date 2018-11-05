@@ -4,16 +4,16 @@
 
 @media @sm {
   .wrapper {
-    overflow-y: auto !important;
+    overflow: hidden !important;
     main {
       flex-direction: column;
       .aside-left {
         width: @width-aside-left*2;
-        height: @height-aside / 1.5;
+        height: 35vh;
         background: url("../assets/tablet.svg");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 350px 450px;
+        background-size: auto 250px;
       }
       .aside-right {
         width: @width-aside-right*2;
@@ -24,13 +24,20 @@
           justify-content: center;
           align-items: flex-start;
           .title {
+            margin-top: 0 !important;
             text-align: center !important;
           }
           .subtitle {
             text-align: center !important;
           }
-          .nav-item {
-            text-align: center !important;
+          .navigation {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .nav-item {
+              text-align: center !important;
+            }
           }
         }
       }
@@ -44,8 +51,22 @@
       background: url("../assets/mobile.svg") !important;
       background-repeat: no-repeat !important;
       background-position: center !important;
-      background-size: 300px 400px;
-
+      background-size: 160px 150px !important;
+    }
+    .aside-right{
+      margin-bottom: 0 !important;
+      form {
+        .input-primary {
+          margin-right: 15px;
+          input {
+           
+            width: @input-width - 70 !important;
+          }
+        }
+        .btn-primary {
+          width: 130px;
+        }
+      }
     }
   }
 }

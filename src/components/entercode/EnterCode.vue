@@ -13,6 +13,7 @@
                 <div 
                     class="btn-primary"
                     :class="{'btn-disabled': enterCode == '' }"
+                    @click="$router.push('/success')"
                     >{{$t("enter_code.btn")}}</div>
             </form>
             <transition name="fade">

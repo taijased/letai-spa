@@ -1,7 +1,7 @@
 <template>
-    <div class="canvas">
-        <div v-for="(item, key) in 50" :key="key" class="bubble"></div>
-    </div>
+  <div class="canvas">
+    <div v-for="(item, key) in 35" :key="key" class="bubble"></div>
+  </div>
 </template>
 
 <script>
@@ -28,7 +28,7 @@ randomT(min,max)
   transition: opacity .5s
   position absolute
 
-for $i in (1..50)
+for $i in (1..35)
 
   .bubble
     &:nth-child({$i})
@@ -44,11 +44,35 @@ for $i in (1..50)
 
   @keyframes move{$i}
     0%
-      right: 200px
+      right: 20%
       top: random(30%, 50%)
     100%
       right: random(0, 700)px
       top: random(0, 200)px
       transform: translate(random(-100, -200)px, 0)
       opacity 0
+
+@media screen and (max-width: 769px) 
+  for $i in (1..50)
+  
+    .bubble
+      &:nth-child({$i})
+        background: radial-gradient(ellipse at bottom, rgba(27, 113, 255, 0.0001) 0%,#1B71FF 100%)
+        width: random(5, 100)px
+        height: @width
+        left: random(1, 100)vw
+        bottom: random(1, 100)vh
+        animation move+$i infinite randomT(3, 15)
+
+    @keyframes move{$i}
+      0%
+        bottom: -100px
+
+      100%
+        bottom: random(0, 100)vh
+        transform: translate(random(-100, 200)px, 0)
+        opacity 0
+      
+    
+
 </style>

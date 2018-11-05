@@ -16,7 +16,7 @@
             </aside>
         </main>
         <footer>
-            <div>© ПАО «Таттелеком» 2018</div>
+            <div>{{$t("hello.footer")}}</div>
             <span>powered by <a href="http://tim.agency">tim.agency</a></span>
         </footer>
     </div>
