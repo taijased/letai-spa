@@ -18,38 +18,6 @@
   .forceBlockLevel();
   .hardwareAccel();
 }
-.sweep-to-left() {
-  .hacks();
-  position: relative;
-  .prefixed(transition-property, color);
-  .prefixed(transition-duration, @time-description);
-
-  &:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: @btn-primary;
-    .prefixed(transform, scaleX(0));
-    .prefixed(transform-origin, 100% 50%);
-    .prefixed(transition-property, transform);
-    .prefixed(transition-duration, @time-description);
-    .prefixed(transition-timing-function, ease-out);
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    cursor: pointer;
-    color: white;
-    &:before {
-      .prefixed(transform, scaleX(1));
-    }
-  }
-}
 .sweep-to-right() {
   .hacks();
   position: relative;
@@ -162,6 +130,51 @@
       left @time-description, font-size @time-description;
   }
 }
+
+
+// hover animation
+.underline-from-right() {
+
+	.hacks();
+	position: relative;
+	overflow: hidden;
+	&:before {
+    content: "";
+		position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+		bottom: 0;
+		background: white;
+    height: 1px;
+		.prefixed(transition-property, "left");
+		.prefixed(transition-duration, @time-description);
+    .prefixed(transition-timing-function, ease-out);
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid red;
+    }
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+    cursor: pointer;
+    &:before {
+      left: 100%;
+    }
+  }
+  
+}
+
+
+
+
+
+
+
 
 // animatioin for route
 .fade-enter-active,

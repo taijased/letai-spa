@@ -31,7 +31,7 @@
 
 <script>
 import { mapGetters, mapActions } from "vuex";
-
+import '../../style/animation.less'
 export default {
   computed: {
     ...mapGetters({
