@@ -1,6 +1,9 @@
 <template>
     <div class="navigation">
-        <span class="nav-item item-disabled" v-if="getTimer">{{$t("enter_code.navigation.resend.title") + " "+ getTimer + " " + $t("enter_code.navigation.resend.sec")}}</span>
+        <span 
+          :class="{'item-disabled': getTimer > 0, 'nav-item': getTimer == 0}"
+          v-if="getTimer"
+          >{{$t("enter_code.navigation.resend.title") + " "+ getTimer + " " + $t("enter_code.navigation.resend.sec")}}</span>
         <span class="nav-item" v-else>{{$t("enter_code.navigation.resend.main")}}</span>
         <span class="nav-item" @click="$router.push('code-dont-send')">{{$t("enter_code.navigation.no_sms")}}</span>
     </div>
