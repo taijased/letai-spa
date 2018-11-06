@@ -5,8 +5,13 @@
 @media @sm {
   .wrapper {
     overflow: hidden !important;
-    background: radial-gradient(730.39px at 25.42% 50%, #3AAAFF 0%, #3AA9FF 37.3%, #1B71FF 100%) !important;
-    
+    background: radial-gradient(
+      730.39px at 25.42% 50%,
+      #3aaaff 0%,
+      #3aa9ff 37.3%,
+      #1b71ff 100%
+    ) !important;
+
     main {
       flex-direction: column;
       .aside-left {
@@ -48,7 +53,12 @@
 }
 @media @xs {
   .wrapper {
-    background: radial-gradient(380.03px at 56.2% 31.86%, #3AAAFF 0%, #3AA9FF 37.3%, #1B71FF 100%) !important;
+    background: radial-gradient(
+      380.03px at 56.2% 31.86%,
+      #3aaaff 0%,
+      #3aa9ff 37.3%,
+      #1b71ff 100%
+    ) !important;
   }
   main {
     .aside-left {
@@ -59,22 +69,41 @@
       background-position: center !important;
       background-size: 160px 150px !important;
     }
-    .aside-right{
+    .aside-right {
+      width: 90vw !important;
+      margin: 0 5vw;
       margin-bottom: 0 !important;
-      .subtitle {
-        margin-bottom: 12px !important;
-      }
-      form {
-        margin-left: 30px;
-        .input-primary {
-          margin-right: 15px;
-          input {
-            width: @input-width - 70 !important;
+      .container {
+        justify-content: flex-start !important;
+        width: 100%;
+        .content {
+          width: 100%;
+          .title {
+            margin-top: 0 !important;
+            text-align: left !important;
           }
-        }
-        .btn-primary {
-          width: 130px;
-          margin-right: 30px;
+          .subtitle {
+            text-align: left !important;
+            margin-bottom: 12px !important;
+          }
+          .navigation {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+          form {
+            width: 100%;
+            .input-primary {
+              margin: 12px 0;
+              input {
+                width: @input-width - 70 !important;
+              }
+            }
+            .btn-primary {
+              width: 150px;
+            }
+          }
         }
       }
     }

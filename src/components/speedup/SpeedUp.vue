@@ -5,7 +5,7 @@
             <div class="subtitle" v-html="$t('horeca.subtitle')"></div>
             <form>
                 <div class="input-primary">      
-                    <input v-model="enterCode" type="text" required>
+                    <input v-model="newData" type="text" required>
                     <div 
                         class="label"
                         :class="{'not-empty': newData !== ''}"
@@ -13,7 +13,7 @@
                 </div>
                 <div 
                     class="btn-primary"
-                    :class="{'btn-disabled': enterCode == '' }"
+                    :class="{'btn-disabled': newData == '' }"
                 >{{$t("horeca.btn_change")}}</div>
             </form>
             <div class="subtitle" v-html="$t('horeca.second_subtitle')"></div>

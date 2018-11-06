@@ -14,7 +14,7 @@
   "hello": {
     "title": "Welcome to Tattelecom",
     "subtitle": "Specify your phone number to recieve acces code as message",
-    "footer": "PAO «Tattelecom» 2018"
+    "footer": "© PAO «Tattelecom» 2018"
   },
   "enter_code": {
     "subtitle": "Access code was sent to your number as message",
