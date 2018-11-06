@@ -21,7 +21,7 @@
                     @click="$router.push('/enter-with-code')">{{$t("form.btn")}}</div>
             </form>
             <div class="navigation">
-                <div class="nav-item">{{$t("navigation.or")}}</div>
+                <div>{{$t("navigation.or")}}</div>
                 <div class="nav-item" @click="$router.push('/ttk-account-login')">{{$t("navigation.enter")}}</div>
                 <div class="nav-item">{{$t("navigation.auth")}}</div>
             </div>

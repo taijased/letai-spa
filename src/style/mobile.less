@@ -5,6 +5,8 @@
 @media @sm {
   .wrapper {
     overflow: hidden !important;
+    background: radial-gradient(730.39px at 25.42% 50%, #3AAAFF 0%, #3AA9FF 37.3%, #1B71FF 100%) !important;
+    
     main {
       flex-direction: column;
       .aside-left {
@@ -45,26 +47,34 @@
   }
 }
 @media @xs {
+  .wrapper {
+    background: radial-gradient(380.03px at 56.2% 31.86%, #3AAAFF 0%, #3AA9FF 37.3%, #1B71FF 100%) !important;
+  }
   main {
     .aside-left {
+      display: none;
       width: @width-aside-left*2;
-      background: url("../assets/mobile.svg") !important;
+      background: none !important;
       background-repeat: no-repeat !important;
       background-position: center !important;
       background-size: 160px 150px !important;
     }
     .aside-right{
       margin-bottom: 0 !important;
+      .subtitle {
+        margin-bottom: 12px !important;
+      }
       form {
+        margin-left: 30px;
         .input-primary {
           margin-right: 15px;
           input {
-           
             width: @input-width - 70 !important;
           }
         }
         .btn-primary {
           width: 130px;
+          margin-right: 30px;
         }
       }
     }

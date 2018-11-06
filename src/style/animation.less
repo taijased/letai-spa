@@ -198,14 +198,14 @@
 // }
 
 .fade-enter, .fade-leave-to {
-  -webkit-animation: slide-in-left 2*@time-description cubic-bezier(0.25, 0.46, 0.45, 0.94)
+  -webkit-animation: slide-in-right @time-description cubic-bezier(0.25, 0.46, 0.45, 0.94)
   both;
-  animation: slide-in-left 2*@time-description cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-right @time-description cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .fade-leave-active {
-  -webkit-animation: slide-in-left 2*@time-description cubic-bezier(0.25, 0.46, 0.45, 0.94)
+  -webkit-animation: slide-in-left @time-description cubic-bezier(0.25, 0.46, 0.45, 0.94)
   reverse both;
-  animation: slide-in-left 2*@time-description cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse
+  animation: slide-in-left @time-description cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse
     both;
 }
 @fade-left-width: -50%;

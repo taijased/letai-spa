@@ -5,10 +5,16 @@
             <div class="subtitle" v-html="$t('horeca.subtitle')"></div>
             <form>
                 <div class="input-primary">      
-                    <input type="text" required>
-                    <div class="label">{{$t("horeca.input")}}</div>
+                    <input v-model="enterCode" type="text" required>
+                    <div 
+                        class="label"
+                        :class="{'not-empty': newData !== ''}"
+                    >{{$t("horeca.input")}}</div>
                 </div>
-                <div class="btn-primary">{{$t("horeca.btn_change")}}</div>
+                <div 
+                    class="btn-primary"
+                    :class="{'btn-disabled': enterCode == '' }"
+                >{{$t("horeca.btn_change")}}</div>
             </form>
             <div class="subtitle" v-html="$t('horeca.second_subtitle')"></div>
             <transition name="fade">
@@ -18,3 +24,27 @@
     </div>
 </template>
 
+<script>
+import { mapGetters, mapActions } from "vuex";
+
+export default {
+  computed: {
+    ...mapGetters({
+      getNewData: "form/getNewData",
+    }),
+    newData: {
+        get () {
+            return this.getNewData;
+        },
+        set (val) {
+            this.setNewData(val)
+        }
+    }
+  },
+  methods: {
+    ...mapActions({
+      setNewData: "form/setNewData",
+    })
+  }
+};
+</script>

@@ -17,6 +17,9 @@ export const UPDATE_PHONE_NUMBER = (state, phoneNumber) => {
 export const UPDATE_ENTER_CODE = (state, enterCode) => {
   state.enterCode = enterCode;
 }
+export const SET_NEW_DATA = (state, newData) => {
+  state.newData = newData;
+}
 
 export const START_TIMER = (state) => {
   try {

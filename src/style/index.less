@@ -108,6 +108,7 @@ main {
           line-height: normal;
           font-size: 20px;
           text-align: left;
+          margin-bottom: 10px;
         }
         .subtitle {
           margin-top: 10px;
@@ -177,9 +178,14 @@ main {
         .navigation {
           display: flex;
           flex-direction: column;
-          .nav-item {
+          div {
             width: fit-content;
-            margin-top: 10px;
+            text-align: left;
+          }
+          .nav-item {
+            margin-top: 15px;
+            width: fit-content;
+            margin-top: 15px;
             font-size: @subtitle-size;
             color: white;
             text-align: left;
