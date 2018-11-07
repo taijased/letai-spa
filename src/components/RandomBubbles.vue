@@ -40,12 +40,15 @@ for $i in (1..30)
       opacity: .8
       transition: opacity 1s
       transform: translate(random(0,-50%), -50%)
-      animation move+$i infinite randomT(5, 10)
+      animation move+$i infinite randomT(3, 10)
 
   @keyframes move{$i}
     0%
       right: 30%
       top: random(30%, 50%)
+      opacity 0
+    40%
+      opacity .8
     100%
       right: random(0, 700)px
       top: random(0, 200)px
@@ -77,6 +80,9 @@ for $i in (1..30)
       0%
         right: 50%
         bottom: 70%
+        opacity 0
+      40%
+        opacity .8
       100%
         right: random(0, 700)px
         bottom:  random(70%, 100%)
@@ -103,10 +109,12 @@ for $i in (1..30)
 
       @keyframes move{$i}
         0%
-          bottom: -10vh
-
+          bottom: 0
+          opacity 0
+        40%
+          opacity .8
         100%
-          bottom: random(90, 100)vh
+          bottom: random(0, 100)vh
           transform: translate(random(-100, 200)px, 0)
           opacity 0
 
