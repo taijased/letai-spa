@@ -10,7 +10,10 @@
                 <RandomBubbles/>
             </aside>
             <aside class="aside-right">
-                <transition name="fade">
+                <transition 
+                    name="fade"
+                    mode="out-in"
+                    :css="true">
                     <router-view/>
                 </transition>
             </aside>

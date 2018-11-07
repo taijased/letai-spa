@@ -3,7 +3,7 @@
         <div class="content">
             <div class="title" v-html="$t('hello.title')"></div>
             <div class="subtitle" v-html="$t('horeca.subtitle')"></div>
-            <form>
+            <form class="for-mobile">
                 <div class="input-primary">      
                     <input v-model="newData" type="text" required>
                     <div 
@@ -17,7 +17,10 @@
                 >{{$t("horeca.btn_change")}}</div>
             </form>
             <div class="subtitle" v-html="$t('horeca.second_subtitle')"></div>
-            <transition name="fade">
+            <transition 
+                    name="fade" 
+                    mode="out-in"
+                    :css="true">
                 <router-view/>
             </transition>
         </div>

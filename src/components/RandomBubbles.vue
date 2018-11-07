@@ -103,7 +103,7 @@ for $i in (1..30)
 
       @keyframes move{$i}
         0%
-          bottom: -100px
+          bottom: -10vh
 
         100%
           bottom: random(90, 100)vh

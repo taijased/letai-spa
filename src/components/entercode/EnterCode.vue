@@ -2,7 +2,7 @@
     <div class="container">
         <div class="content">
             <div class="subtitle" v-html="$t('enter_code.subtitle')"></div>
-            <form>
+            <form class="for-mobile">
                 <div class="input-primary">      
                     <input v-model="enterCode" type="number">
                     <div 
@@ -16,7 +16,11 @@
                     @click="$router.push('/success')"
                     >{{$t("enter_code.btn")}}</div>
             </form>
-            <transition name="fade">
+            <transition 
+                name="fade"
+                mode="out-in"
+                :css="true"
+                >
                 <router-view/>
             </transition>
         </div>

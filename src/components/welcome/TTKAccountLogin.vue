@@ -2,7 +2,7 @@
     <div class="container">
         <div class="content">
             <div class="subtitle" v-html="$t('ttk_account_login.subtitle')"></div>
-            <form>
+            <form class="for-mobile">
                 <div class="input-primary">      
                     <input v-model="login" type="text" required>
                     <div 
@@ -11,7 +11,7 @@
                         >{{$t("ttk_account_login.login_input")}}</div>
                 </div>
             </form>
-            <form>
+            <form class="for-mobile">
                 <div class="input-primary">      
                     <input v-model="password" type="password" required>
                     <div 

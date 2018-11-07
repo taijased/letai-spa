@@ -2,7 +2,7 @@
     <div class="container">
         <div class="content">
             <div class="subtitle" v-html="$t('voice_login.subtitle')"></div>
-            <form>
+            <form class="for-mobile">
                 <div class="input-primary">      
                     <input type="text" required>
                     <div class="label">{{$t("enter_code.input")}}</div>
