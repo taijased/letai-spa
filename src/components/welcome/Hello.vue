@@ -2,7 +2,7 @@
     <div class="container">
         <div class="content">
             <div class="subtitle" v-html="$t('hello.subtitle')"></div>
-            <form>
+            <form class="for-mobile">
                 <!-- <div class="input-primary" :class="{'error': getValidPhoneNumber == false}">       -->
                 <div class="input-primary">      
                     <input 

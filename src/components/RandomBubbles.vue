@@ -52,19 +52,43 @@ for $i in (1..30)
       transform: translate(random(-100, -200)px, 0)
       opacity 0
 
-@media screen and (max-width: 576px) 
+@media screen and (max-width: 769px) 
   .canvas
     height 100vh
     width 100vw
     position relative
     overflow hidden
 
-  .bubble
-    display block
-    // background: radial-gradient(ellipse at top right, #b8c6c6 0%,#30b3d3 46%,#20628c 100%)
-    border-radius: 100%
-    opacity: .8
-    position absolute
+  for $i in (1..30)
+
+    .bubble
+      &:nth-child({$i})
+        background: radial-gradient(ellipse at bottom, rgba(27, 113, 255, 0.0001) 0%,#1B71FF 100%)
+        width: random(5, 60)px
+        height: @width
+        right: random(1, 100)vw
+        bottom: random(30%, 100%)
+        opacity: .8
+        transition: opacity 1s
+        transform: translate(random(0,-50%), -50%)
+        animation move+$i infinite randomT(5, 10)
+
+    @keyframes move{$i}
+      0%
+        right: 50%
+        bottom: 70%
+      100%
+        right: random(0, 700)px
+        bottom:  random(70%, 100%)
+        transform: translate(random(-100, -200)px, 0)
+        opacity 0
+
+@media screen and (max-width: 576px) 
+  .canvas
+    height 100vh
+    width 100vw
+    position relative
+    overflow hidden
 
   for $i in (1..30)
 
@@ -82,7 +106,7 @@ for $i in (1..30)
           bottom: -100px
 
         100%
-          bottom: random(80, 100)vh
+          bottom: random(90, 100)vh
           transform: translate(random(-100, 200)px, 0)
           opacity 0
 

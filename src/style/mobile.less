@@ -62,8 +62,8 @@
   }
   main {
     .aside-left {
-      display: none;
       width: @width-aside-left*2;
+      height: 1px !important;
       background: none !important;
       background-repeat: no-repeat !important;
       background-position: center !important;
@@ -84,7 +84,7 @@
           }
           .subtitle {
             text-align: left !important;
-            margin-bottom: 12px !important;
+            margin-bottom: 22px !important;
           }
           .navigation {
             display: flex;
@@ -100,8 +100,25 @@
                 width: @input-width - 70 !important;
               }
             }
+          }
+          .for-mobile {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-right: 5vw;
+            .input-primary {
+              width: 100% !important;
+              margin: 0;
+              input {
+                width: 97.5% !important;
+              }
+            }
             .btn-primary {
-              width: 150px;
+              margin: 22px 0;
+              width: 100% !important;
+              height: @btn-height;
             }
           }
         }
